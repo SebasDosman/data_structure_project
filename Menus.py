@@ -7,13 +7,8 @@ class Menu():
               "3. BubbleSort Bidirreccional \n",
               "4. InsertionSort \n",
               "5. SelectionSort \n",
-              "6. QuickSort \n",
-              "7. MergeSort \n",
-              "8. RadixSort \n",
-              "9. CountSort \n",
-              "10. ShellSort \n",
-              "11. BucketSort \n",
-              "12. TimSort")
+              "6. ShellSort \n", 
+              "-1. Salir")
 
         opcion = int(input("Digite el numero segun la opcion: \n"))
         return opcion

@@ -26,9 +26,13 @@ calculoSeries = CalculosSeries(series)
 
 Menu.__bienvenida__()
 calculoSeries.__printSeries__()
-calculoSeries.__promedioTemp__()
-calculoSeries.__seriesMin__()
+# calculoSeries.__promedioTemp__()
+# calculoSeries.__seriesMin__()
 opcion = Menu.__opcionesMenu__()
+
+
+# <-- Menu Requerimientos -->
+
 
 
 # <-- Menu -->
@@ -82,62 +86,8 @@ while (opcion != -1):
         opcion2 = Menu.__ordenamientoSeries__()
         
         if (opcion2 == 1):        
-            print(ordenamiento.__quickSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__quickSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 7):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
-            print(ordenamiento.__mergeSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__mergeSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 8):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
-            print(ordenamiento.__radixSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__radixSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 9):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
-            print(ordenamiento.__countSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__countSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 10):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
             print(ordenamiento.__shellSort__(), "\n")
         elif (opcion2 == 2):
             print(ordenamiento2.__shellSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 11):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
-            print(ordenamiento.__bucketSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__bucketSort__(), "\n")
-        
-        opcion = Menu.__opcionesMenu__()
-    elif (opcion == 12):
-        opcion2 = Menu.__ordenamientoSeries__()
-        
-        if (opcion2 == 1):        
-            print(ordenamiento.__timSort__(), "\n")
-        elif (opcion2 == 2):
-            print(ordenamiento2.__timSort__(), "\n")
         
         opcion = Menu.__opcionesMenu__()
