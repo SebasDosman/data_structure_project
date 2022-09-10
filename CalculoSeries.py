@@ -1,6 +1,6 @@
 from Series import Series
 
-class CalculosSeries():
+class CalculoSeries():
     list : Series = []
     
     def __init__(self, list):
@@ -38,7 +38,7 @@ class CalculosSeries():
         print("\n")
     
     def __seriesMin__(self):
-        print("Series con menos de 3 temporadas: ")
+        print("\n Series con menos de 3 temporadas: ")
         
         for i in range(0, len(self.list)):
             if (self.list[i].__getCantTemp__() <= 3):
@@ -48,7 +48,7 @@ class CalculosSeries():
     
     def __strangerThings__(self, list, orderList : Series):
         print("\n Serie Stranger Things: ")
-        position = CalculosSeries.__binaria__(list, "Stranger Things")
+        position = CalculoSeries.__binaria__(list, "Stranger Things")
         print(" Nombre: ", orderList[position].__getNombre__(), "| Genero: ", orderList[position].__getGenero__(), "| Valoracion: ", orderList[position].__getValoracion__(), "| Cant. Temporadas: ", orderList[position].__getCantTemp__(), "| Cant. Capitulos: ", orderList[position].__getCantCap__())
         print("\n")
     
