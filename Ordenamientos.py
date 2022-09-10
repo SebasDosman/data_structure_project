@@ -95,22 +95,3 @@ class Ordenamientos():
                 self.list[j] = temp
             interval //= 2
         return self.list
-    
-    
-    # <-- Busqueda Binaria -->
-    def __binaria__(list, found):
-        position = -1
-        first = 0
-        last = len(list) - 1
-        
-        while (first <= last) and (position == -1):
-            middle = (first + last) / 2
-            
-            if (list[middle] == found):
-                position = middle
-            else:
-                if (found < list[middle]):
-                    last = middle - 1
-                else: 
-                    first = middle + 1
-        return position
