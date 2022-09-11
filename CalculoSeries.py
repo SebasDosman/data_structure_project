@@ -34,7 +34,7 @@ class CalculoSeries():
         for i in range(0, len(self.list)):
             j += self.list[i].__getCantTemp__()
             
-        print("Promedio Temporadas: ", j / len(self.list))
+        print("Cant. Series: " , len(self.list) , "| Promedio Temporadas: ", j / len(self.list))
         print("\n")
     
     def __seriesMin__(self):
@@ -48,8 +48,29 @@ class CalculoSeries():
     
     def __strangerThings__(self, list, orderList : Series):
         print("\n Serie Stranger Things: ")
+        
         position = CalculoSeries.__binaria__(list, "Stranger Things")
+        
         print(" Nombre: ", orderList[position].__getNombre__(), "| Genero: ", orderList[position].__getGenero__(), "| Valoracion: ", orderList[position].__getValoracion__(), "| Cant. Temporadas: ", orderList[position].__getCantTemp__(), "| Cant. Capitulos: ", orderList[position].__getCantCap__())
+        print("\n")
+    
+    def __breakingBad__(self, list, orderList : Series):
+        position = CalculoSeries.__binaria__(list, "Breaking Bad")
+        cantCap = orderList[position].__getCantCap__()
+        cantTemp = orderList[position].__getCantTemp__()
+        prom = cantCap / cantTemp
+        print("\n Promedio de Capitulos por Temporada de la serie Breaking Bad: ")
+        print("Cant. Cap: " , cantCap , "| Cant. Temp: " , cantTemp , "| clPromedio: " , prom)
+        print("\n")
+    
+    def __tempCapMax__(self, listTemp, listCap, orderListTemp : Series, orderListCap : Series):
+        positionTemp = CalculoSeries.__binaria__(listTemp, max(listTemp))
+        print("\n Serie con mayor Cant. Temporadas: ")
+        print(" Nombre: ", orderListTemp[positionTemp].__getNombre__(), "| Genero: ", orderListTemp[positionTemp].__getGenero__(), "| Valoracion: ", orderListTemp[positionTemp].__getValoracion__(), "| Cant. Temporadas: ", orderListTemp[positionTemp].__getCantTemp__(), "| Cant. Capitulos: ", orderListTemp[positionTemp].__getCantCap__())
+        
+        positionCap = CalculoSeries.__binaria__(listCap, max(listCap))
+        print("Serie con mayor Cant. Capitulos: ")
+        print(" Nombre: ", orderListCap[positionCap].__getNombre__(), "| Genero: ", orderListCap[positionCap].__getGenero__(), "| Valoracion: ", orderListCap[positionCap].__getValoracion__(), "| Cant. Temporadas: ", orderListCap[positionCap].__getCantTemp__(), "| Cant. Capitulos: ", orderListCap[positionCap].__getCantCap__())
         print("\n")
     
     def __binaria__(list, found):

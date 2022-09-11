@@ -4,7 +4,7 @@ strangerThings = Series("Stranger Things", "Accion", 4.5, 3, 5)
 lucifer = Series("Lucifer", "Comedia", 3, 4, 3)
 breakingBad = Series("Breaking Bad", "Ficcion", 4, 9, 64)
 bettyLaFea = Series("Betty La Fea", "Romance", 2.5, 6, 10)
-bobEsponja = Series("Bob Esponja", "Cartoon", 5, 4, 8)
+bobEsponja = Series("Bob Esponja", "Cartoon", 5, 4, 120)
 sandMan = Series("Sand Man", "Comedia", 2.5, 6, 2)
 
 series = [strangerThings, lucifer, breakingBad, bettyLaFea, bobEsponja, sandMan]

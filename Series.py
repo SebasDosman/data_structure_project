@@ -3,14 +3,14 @@ class Series():
     genero = ""
     valoracion = 0.0
     cant_temp = 0
-    cant_capt = 0
+    cant_cap = 0
     
     def __init__(self, nombre, genero, valoracion, cant_temp, cant_cap):
         self.nombre = nombre 
         self.genero = genero
         self.valoracion = valoracion
         self. cant_temp = cant_temp
-        self.cant_capt = cant_cap
+        self.cant_cap = cant_cap
     
     def __getNombre__(self):
         return self.nombre
@@ -25,7 +25,7 @@ class Series():
         return self.cant_temp
     
     def __getCantCap__(self):
-        return self.cant_capt
+        return self.cant_cap
     
     def __setNombre__(self, nombre):
         self.nombre = nombre 
