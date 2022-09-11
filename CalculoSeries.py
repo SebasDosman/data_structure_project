@@ -1,3 +1,5 @@
+from os import remove
+from typing import List
 from Series import Series
 
 class CalculoSeries():
@@ -21,7 +23,7 @@ class CalculoSeries():
         print("\n")
     
     def __printLista__(self, list):
-        print("\n \n Series Disponibles: ")
+        print("\n \n Series: ")
         
         for i in range(0, len(list)):
             print(i + 1,".", " Nombre: ", list[i].__getNombre__(), "| Genero: ", list[i].__getGenero__(), "| Valoracion: ", list[i].__getValoracion__(), "| Cant. Temporadas: ", list[i].__getCantTemp__(), "| Cant. Capitulos: ", list[i].__getCantCap__())
@@ -34,6 +36,7 @@ class CalculoSeries():
         for i in range(0, len(self.list)):
             j += self.list[i].__getCantTemp__()
             
+        print("\n Cantidad de Series y Promedio de Temporadas:")
         print("Cant. Series: " , len(self.list) , "| Promedio Temporadas: ", j / len(self.list))
         print("\n")
     
@@ -60,7 +63,7 @@ class CalculoSeries():
         cantTemp = orderList[position].__getCantTemp__()
         prom = cantCap / cantTemp
         print("\n Promedio de Capitulos por Temporada de la serie Breaking Bad: ")
-        print("Cant. Cap: " , cantCap , "| Cant. Temp: " , cantTemp , "| clPromedio: " , prom)
+        print("Cant. Cap: " , cantCap , "| Cant. Temp: " , cantTemp , "| Promedio: " , prom)
         print("\n")
     
     def __tempCapMax__(self, listTemp, listCap, orderListTemp : Series, orderListCap : Series):
@@ -72,6 +75,17 @@ class CalculoSeries():
         print("Serie con mayor Cant. Capitulos: ")
         print(" Nombre: ", orderListCap[positionCap].__getNombre__(), "| Genero: ", orderListCap[positionCap].__getGenero__(), "| Valoracion: ", orderListCap[positionCap].__getValoracion__(), "| Cant. Temporadas: ", orderListCap[positionCap].__getCantTemp__(), "| Cant. Capitulos: ", orderListCap[positionCap].__getCantCap__())
         print("\n")
+    
+    def __topCinco__(self, listValoracion : List, orderList : List):
+        listResul : Series = []
+        
+        while (len(listResul) < 5):
+            maximum = CalculoSeries.__binaria__(listValoracion, max(listValoracion))
+            listValoracion.pop(maximum)
+            listResul.append(orderList[maximum])
+            orderList.pop(maximum)
+        
+        self.__printLista__(listResul)
     
     def __binaria__(list, found):
         position = -1

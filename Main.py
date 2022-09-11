@@ -1,23 +1,21 @@
 from Ordenamientos import Ordenamientos
 from Menus import Menu
 from CalculoSeries import CalculoSeries
-from Instancias import series, nombreSeries, generoSeries, valoracionSeries, tempSeries, tempCap
-
+from Instancias import series, nombreSeries, valoracionSeries, tempSeries, tempCap
 
 
 # <-- Instancias Ordenamientos -->
 ordenamiento = Ordenamientos(nombreSeries)
 ordenamiento1 = Ordenamientos(tempSeries)
 ordenamiento2 = Ordenamientos(tempCap)
+ordenamiento3 = Ordenamientos(valoracionSeries)
 calculoSeries = CalculoSeries(series)
-
 
 
 # <-- Mensajes -->
 Menu.__bienvenida__()
 calculoSeries.__printSeries__()
 opcion = Menu.__opcionesMenu__()
-
 
 
 # <-- Menu -->
@@ -49,7 +47,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__bubbleSort__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
@@ -81,7 +81,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__bubbleSortBetter__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
@@ -113,7 +115,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__bubbleSortBidirectional__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
@@ -145,7 +149,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__insertionSort__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
@@ -177,7 +183,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__selectionSort__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
@@ -209,7 +217,9 @@ while (opcion != -1):
         elif (opcion3 == 4):
             calculoSeries.__breakingBad__(nombreSeries, sort1)
         elif (opcion3 == 5):
-            print()
+            ordenamiento3.__shellSort__()
+            sort4 = sorted(series, key = lambda x:x.valoracion)
+            calculoSeries.__topCinco__(valoracionSeries, sort4)
         elif (opcion3 == 6):
             calculoSeries.__seriesMin__()
         
