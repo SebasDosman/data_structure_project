@@ -21,7 +21,7 @@ opcion = Menu.__opcionesMenu__()
 # <-- Menu -->
 while (opcion != -1):
     if (opcion == 1):
-        opcion2 = Menu.__ordenamientoSeries__()
+        opcion2 = Menu.__ordenamientoSeries__() 
         ordenamiento.__bubbleSort__()
         ordenamiento1.__bubbleSort__()
         ordenamiento2.__bubbleSort__()

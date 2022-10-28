@@ -1,5 +1,3 @@
-from os import remove
-from typing import List
 from Series import Series
 
 class CalculoSeries():
