@@ -7,10 +7,9 @@ This Python program was developed as part of a Data Structures class. It focuses
 - Object-Oriented Programming: The program is designed using the object-oriented programming paradigm, providing a flexible and scalable framework for data manipulation.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/yourusername/yourrepository.git`
-2. Navigate to the project directory: `cd yourrepository`
-3. Install the dependencies: `pip install -r requirements.txt`
-4. Run the program: `python Main.py`
+1. Clone the repository: `git clone https://github.com/SebasDosman/data_structure_project.git`
+2. Navigate to the project directory: `cd data_structure_project`
+3. Run the program: `python Main.py`
 
 ## Usage
 After running the program, users can...
